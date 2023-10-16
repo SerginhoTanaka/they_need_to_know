@@ -129,8 +129,7 @@ env.bak/
 venv.bak/
 venv
 
-node_modules
-node_modules/
+
 staticfiles
 # Spyder project settings
 .spyderproject
