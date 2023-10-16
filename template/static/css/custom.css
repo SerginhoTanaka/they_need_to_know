@@ -1,0 +1,26 @@
+.bg-my-custom-gradient {
+  background: hsla(0, 0%, 100%, 1);
+
+  background: linear-gradient(
+    315deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(137, 47%, 65%, 1) 14%,
+    hsla(237, 75%, 69%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(137, 47%, 65%, 1) 14%,
+    hsla(237, 75%, 69%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(0, 0%, 100%, 1) 0%,
+    hsla(137, 47%, 65%, 1) 14%,
+    hsla(237, 75%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#7ED095", GradientType=1 );
+}

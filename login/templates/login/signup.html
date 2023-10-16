@@ -1,0 +1,30 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Registro</h2>
+        <form action="{%url 'signup'%}" method="POST">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-600">Nome</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border rounded-md" placeholder="Seu nome" required>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-600">E-mail</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border rounded-md" placeholder="Seu endereço de e-mail" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-sm font-medium text-gray-600">Senha</label>
+                <input type="password" id="password" name="password" class="w-full p-2 border rounded-md" placeholder="Sua senha" required>
+            </div>
+            <div class="mb-6">
+                <label for="password_confirmation" class="block text-sm font-medium text-gray-600">Confirmação de Senha</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" class="w-full p-2 border rounded-md" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm rounded-md py-2 px-4">Registrar</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
