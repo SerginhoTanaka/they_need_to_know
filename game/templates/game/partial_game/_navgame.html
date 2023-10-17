@@ -1,6 +1,14 @@
 {% load static %}
-<nav class="bg-red-950">
-    <a>
-        <img src="{%static 'img\unnamed.png'%}" class="w-24 h-24">
-    </a>
+<nav class="">
+  <ul>
+    <li>
+      <a href="{% url 'play'%}">
+        <img src="{%static 'img\unnamed.png'%}" class="w-24 h-24" />
+      </a>
+    </li>
+    <li>
+        <a href="#">Pontuação</a>
+    </li>
+  </ul>
+
 </nav>
