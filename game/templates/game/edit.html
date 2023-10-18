@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+{% include 'game/partial_game/_navgame.html'%}
+<div class="flex justify-center items-center h-screen">
+        {{ form.as_p }}
+    <form action="POST">
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{% url 'user' user.id %}"></a>
+</div>
+
+{% endblock %}

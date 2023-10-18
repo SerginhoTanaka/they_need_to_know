@@ -12,4 +12,3 @@ class User(models.Model):
 class Score(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.IntegerField()
-    data_criacao = models.DateTimeField(default=timezone.now)

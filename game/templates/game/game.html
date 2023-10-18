@@ -1,19 +1,21 @@
-{% extends 'base.html'%}
-{% load static %}
-
-{% block content %}
+{% extends 'base.html'%} 
+{% load static %} 
+{% block content %} 
 {% include 'game/partial_game/_navgame.html'%}
-<div class=" flex justify-center items-center h-screen">
-    <p class="">Pergunta</p>
-    <div class="flex justify-center items-center">
-      <div>
-        <button >resp 1</button>
-        <button>resp 2</button>
-      </div>
-      <div>
-        <button >resp 3</button>
-        <button>resp 4</button>
-      </div>
+<div class="flex justify-center items-center h-screen">
+  <p class="">Pergunta</p>
+  <br />
+  <div class="flex justify-center items-center">
+    <div>
+      <button>resp 1</button>
+      <br />
+      <button>resp 2</button>
+    </div>
+    <div>
+      <button>resp 3</button>
+      <br />
+      <button>resp 4</button>
     </div>
   </div>
+</div>
 {%endblock%}

@@ -54,6 +54,9 @@ def signup(request):
     
     return render(request, 'login/signup.html')
 
+def forgot(request):
+    return render(request, 'login/forgot.html')
+
 
 
 
