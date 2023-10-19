@@ -7,7 +7,6 @@ class User(models.Model):
     email = models.CharField(max_length=255, blank=True )
     password = models.CharField(max_length=255)
     data_criacao = models.DateTimeField(default=timezone.now)
-    foto = models.ImageField(blank=True, upload_to='fotos/%Y/%m/')
 
 class Score(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
