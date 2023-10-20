@@ -1,18 +1,11 @@
 {% load static %}
-<nav class="">
-  <ul>
-    <li>
-      <a href="{% url 'play'%}">
-        <img src="{%static 'img\unnamed.png'%}" class="w-24 h-24" />
-      </a>
-    </li>
+<nav class="text-white bg-transparent flex justify-between items-center p-4 rounded-lg transition hover:border-white">
+  <a href="{% url 'play' %}" class="mr-4 hover:text-black">
+    <img src="{% static 'img/unnamed.png' %}" class="w-24 h-24" />
+  </a>
 
-    <li>
-        <a href="{% url 'user'%}"> My User</a>
-    </li>
-    <li>
-        <a href="{% url 'login'%}"> Sair </a>
-    </li>
-  </ul>
-
+  <div class="flex justify-end items-center">
+    <a href="{% url 'user' %}" class="mr-4 hover:text-purple-800">My User</a>
+    <a href="{% url 'login' %}" class="mr-4 hover:text-purple-800">Sair</a>
+  </div>
 </nav>

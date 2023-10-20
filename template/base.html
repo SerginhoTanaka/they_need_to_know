@@ -7,7 +7,10 @@
     <title>Document</title>
     {% include 'partial/_head.html'%}
 </head>
-<body class="bg-my-custom-gradient">
+<body  style="background-color:rgb(0, 0, 0);
+background-image:
+radial-gradient(at -50% -50%, #5252ff 0px, transparent 50%),
+radial-gradient(at 150% 120%, rgb(107, 0, 139) 0px, transparent 65%);">
     {% block content %} {% endblock %}
 </body>
 </html>

@@ -1,6 +1,6 @@
 .bg-my-custom-gradient {
   background-color:hsla(0,0%,100%,1);
 background-image:
-radial-gradient(at 95% 87%, hsla(240,100%,66%,1) 0px, transparent 50%),
-radial-gradient(at 0% 0%, hsla(181,74%,72%,1) 0px, transparent 50%);
+radial-gradient(at -50% -50%, hsla(240,100%,66%,1) 0px, transparent 50%),
+radial-gradient(at 150% 150%, hsla(181,74%,72%,1) 0px, transparent 50%);
 }

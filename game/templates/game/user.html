@@ -4,24 +4,24 @@
 {% block content %}
 {% include 'game/partial_game/_navgame.html'%}
 
-<div class="h-screen flex justify-center items-center">
+<div class="h-screen flex justify-center items-center text-white">
 
     <div class="flex flex-col justify-center items-center">
         <div class="flex flex-col justify-center items-center">
-            <h1 class="text-2xl font-bold text-gray-700 dark:text-white mt-2">User</h1>
+            <h1 class="text-2xl font-boldd dark:text-white mt-2">User</h1>
         </div>
         <div class="flex flex-col justify-center items-center mt-4">
             <div class="flex flex-col justify-center items-center">
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">Name</h1>
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">{{user.username}}</h1>
+                <h1 class="text-xl font-boldd dark:text-white mt-2">Name</h1>
+                <h1 class="text-xl font-boldd dark:text-white mt-2">{{user.username}}</h1>
             </div>
             <div class="flex flex-col justify-center items-center">
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">Email</h1>
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">{{user.email}}</h1>
+                <h1 class="text-xl font-boldd dark:text-white mt-2">Email</h1>
+                <h1 class="text-xl font-boldd dark:text-white mt-2">{{user.email}}</h1>
             </div>
             <div class="flex flex-col justify-center items-center">
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">Pontuação</h1>
-                <h1 class="text-xl font-bold text-gray-700 dark:text-white mt-2">{{user.profile.score}}</h1>
+                <h1 class="text-xl font-boldd dark:text-white mt-2">Pontuação</h1>
+                <h1 class="text-xl font-bold dark:text-white mt-2">{{user.profile.score}}</h1>
             </div>
         </div>
         <a href="{% url 'edit' user.id %}">editar usuario</a>
