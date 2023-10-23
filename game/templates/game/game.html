@@ -5,7 +5,7 @@
   <div class="h-screen flex flex-col justify-between text-white">
     <div class="p-4">
       <h1 class="text-2xl font-bold mb-4">Perguntas do Jogo</h1>
-      <form method="post" action="{% url 'game'%}">
+      <form method="POST" action="{% url 'game' user.id %}">
         {% csrf_token %} {# Adicione o token CSRF se necessário #}
         {% for question in questions %}
           <p class="text-xl mb-2">{{ question.Pergunta }}</p>

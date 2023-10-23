@@ -1,113 +1,112 @@
 {
-    "Pergunta 1": {
+  "Pergunta 1": {
       "Pergunta": "Quem foi o primeiro homem criado por Deus?",
       "Alternativas": {
-        "a": "Adão",
-        "b": "Moisés",
-        "c": "Abraão",
-        "d": "Noé"
+          "a": "Adão",
+          "b": "Moisés",
+          "c": "Abraão",
+          "d": "Noé"
       },
-      "Resposta": "a) Adão",
+      "Resposta": "a",
       "Explicação": "Adão foi o primeiro homem criado por Deus, conforme relatado em Gênesis 2:7: 'Então, formou o Senhor Deus ao homem do pó da terra e lhe soprou nas narinas o fôlego de vida, e o homem passou a ser alma vivente.'"
-    },
-    "Pergunta 2": {
+  },
+  "Pergunta 2": {
       "Pergunta": "Qual destes personagens bíblicos é conhecido por ter enfrentado um gigante chamado Golias?",
       "Alternativas": {
-        "a": "Davi",
-        "b": "Salomão",
-        "c": "Samuel",
-        "d": "Josué"
+          "a": "Davi",
+          "b": "Salomão",
+          "c": "Samuel",
+          "d": "Josué"
       },
-      "Resposta": "a) Davi",
+      "Resposta": "a",
       "Explicação": "Davi enfrentou o gigante Golias e o derrotou com uma funda e uma pedra, como é descrito em 1 Samuel 17:45-50."
-    },
-    "Pergunta 3": {
+  },
+  "Pergunta 3": {
       "Pergunta": "Qual é o primeiro livro do Novo Testamento da Bíblia?",
       "Alternativas": {
-        "a": "Gênesis",
-        "b": "Êxodo",
-        "c": "Mateus",
-        "d": "Apocalipse"
+          "a": "Gênesis",
+          "b": "Êxodo",
+          "c": "Mateus",
+          "d": "Apocalipse"
       },
-      "Resposta": "c) Mateus",
+      "Resposta": "c",
       "Explicação": "O primeiro livro do Novo Testamento é o Evangelho de Mateus, que inicia a narrativa do nascimento e ministério de Jesus Cristo."
-    },
-    "Pergunta 4": {
+  },
+  "Pergunta 4": {
       "Pergunta": "Quem era a esposa de Abraão na Bíblia?",
       "Alternativas": {
-        "a": "Sara",
-        "b": "Rebeca",
-        "c": "Raquel",
-        "d": "Lia"
+          "a": "Sara",
+          "b": "Rebeca",
+          "c": "Raquel",
+          "d": "Lia"
       },
-      "Resposta": "a) Sara",
+      "Resposta": "a",
       "Explicação": "A esposa de Abraão na Bíblia era Sara, como é mencionado em Gênesis 11:29."
-    },
-    "Pergunta 5": {
+  },
+  "Pergunta 5": {
       "Pergunta": "Qual profeta passou três dias e três noites na barriga de um grande peixe?",
       "Alternativas": {
-        "a": "Isaías",
-        "b": "Jeremias",
-        "c": "Jonas",
-        "d": "Ezequiel"
+          "a": "Isaías",
+          "b": "Jeremias",
+          "c": "Jonas",
+          "d": "Ezequiel"
       },
-      "Resposta": "c) Jonas",
+      "Resposta": "c",
       "Explicação": "O profeta Jonas foi engolido por um grande peixe e permaneceu em seu ventre por três dias e três noites, conforme registrado em Jonas 1:17."
-    },
-    "Pergunta 6": {
+  },
+  "Pergunta 6": {
       "Pergunta": "Qual dos Dez Mandamentos diz 'Não matarás'?",
       "Alternativas": {
-        "a": "Primeiro Mandamento",
-        "b": "Terceiro Mandamento",
-        "c": "Quinto Mandamento",
-        "d": "Sétimo Mandamento"
+          "a": "Primeiro Mandamento",
+          "b": "Terceiro Mandamento",
+          "c": "Quinto Mandamento",
+          "d": "Sétimo Mandamento"
       },
-      "Resposta": "c) Quinto Mandamento",
+      "Resposta": "c",
       "Explicação": "O mandamento 'Não matarás' é o quinto dos Dez Mandamentos, como se encontra em Êxodo 20:13."
-    },
-    "Pergunta 7": {
+  },
+  "Pergunta 7": {
       "Pergunta": "Quem liderou os israelitas na travessia do Mar Vermelho?",
       "Alternativas": {
-        "a": "Moisés",
-        "b": "Josué",
-        "c": "Elias",
-        "d": "Ezequiel"
+          "a": "Moisés",
+          "b": "Josué",
+          "c": "Elias",
+          "d": "Ezequiel"
       },
-      "Resposta": "a) Moisés",
+      "Resposta": "a",
       "Explicação": "Moisés liderou os israelitas na travessia do Mar Vermelho, conforme narrado em Êxodo 14."
-    },
-    "Pergunta 8": {
+  },
+  "Pergunta 8": {
       "Pergunta": "Qual dos discípulos de Jesus o traiu por 30 moedas de prata?",
       "Alternativas": {
-        "a": "Pedro",
-        "b": "Tiago",
-        "c": "Judas Iscariotes",
-        "d": "André"
+          "a": "Pedro",
+          "b": "Tiago",
+          "c": "Judas Iscariotes",
+          "d": "André"
       },
-      "Resposta": "c) Judas Iscariotes",
+      "Resposta": "c",
       "Explicação": "Judas Iscariotes traiu Jesus por 30 moedas de prata, como registrado em Mateus 26:14-16."
-    },
-    "Pergunta 9": {
+  },
+  "Pergunta 9": {
       "Pergunta": "Quem escreveu a maior parte dos livros do Novo Testamento da Bíblia?",
       "Alternativas": {
-        "a": "Moisés",
-        "b": "Paulo",
-        "c": "João",
-        "d": "Mateus"
+          "a": "Moisés",
+          "b": "Paulo",
+          "c": "João",
+          "d": "Mateus"
       },
-      "Resposta": "b) Paulo",
+      "Resposta": "b",
       "Explicação": "O apóstolo Paulo escreveu a maior parte dos livros do Novo Testamento, incluindo muitas das epístolas, como Romanos, 1 Coríntios, e assim por diante."
-    },
-    "Pergunta 10": {
+  },
+  "Pergunta 10": {
       "Pergunta": "Qual dos livros da Bíblia é conhecido por relatar a história de um homem chamado Jó, que enfrentou muitas provações?",
       "Alternativas": {
-        "a": "Salmos",
-        "b": "Provérbios",
-        "c": "Eclesiastes",
-        "d": "Jó"
+          "a": "Salmos",
+          "b": "Provérbios",
+          "c": "Eclesiastes",
+          "d": "Jó"
       },
-      "Resposta": "d) Jó",
+      "Resposta": "d",
       "Explicação": "O livro de Jó relata a história de um homem chamado Jó que enfrentou muitas provações e é encontrado no livro de Jó, no Antigo Testamento."
-    }
   }
-  
+}
