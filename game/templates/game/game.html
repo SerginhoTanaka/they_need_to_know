@@ -1,21 +1,19 @@
-{% extends 'base.html'%} 
-{% load static %} 
-{% block content %} 
-{% include 'game/partial_game/_navgame.html'%}
-<div class="flex justify-center items-center h-screen">
-  <p class="text-white">Pergunta</p>
-  <br />
-  <div class="flex justify-center items-center text-white">
-    <div>
-      <button>resp 1</button>
-      <br />
-      <button>resp 2</button>
-    </div>
-    <div>
-      <button>resp 3</button>
-      <br />
-      <button>resp 4</button>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  {% include 'game/partial_game/_navgame.html' %}
+  <div class="flex justify-center items-center h-screen">
+    <div class="flex justify-center items-center text-white">
+      {% for question in questions %}
+        <p class="flex flex-col justify-around">{{ question.Pergunta }}</p>
+        <br> 
+        <ul>
+          {% for key, option in question.Alternativas.items %} 
+          <input type="button">{{ key }}: {{ option }} </input>
+          <br>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </div>
-</div>
-{%endblock%}
+{% endblock %}

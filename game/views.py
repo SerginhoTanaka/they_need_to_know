@@ -1,12 +1,24 @@
 from django.shortcuts import render,redirect, get_object_or_404
+from django.templatetags.static import static
+import random
+import json 
 from login.models import User, Score
 from .models import FormUser
 def play(request):
     return render(request, 'game/play.html')
 
 def game(request):
+    url_qa = static('../../template/static/QA.json')
+
+    with open(url_qa, 'r') as qa:
+        data = json.load(qa)
+
+    qa_keys = list(data.keys())
+    random.shuffle(qa_keys)
+    questions = [data[key] for key in qa_keys[:7]]  
+    questions_data = [{'Pergunta': question['Pergunta'], 'Alternativas': question['Alternativas']} for question in questions]
     
-    return render(request, 'game/game.html')
+    return render(request, 'game/game.html', {'questions': questions_data})
 
 def user(request):
 
