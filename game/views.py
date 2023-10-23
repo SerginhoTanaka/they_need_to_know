@@ -8,6 +8,8 @@ def play(request):
     return render(request, 'game/play.html')
 
 def game(request):
+    if request.method == 'POST':
+        pass 
     url_qa = static('../../template/static/QA.json')
 
     with open(url_qa, 'r') as qa:

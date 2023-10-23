@@ -2,18 +2,28 @@
 {% load static %}
 {% block content %}
   {% include 'game/partial_game/_navgame.html' %}
-  <div class="flex justify-center items-center h-screen">
-    <div class="flex justify-center items-center text-white">
-      {% for question in questions %}
-        <p class="flex flex-col justify-around">{{ question.Pergunta }}</p>
-        <br> 
-        <ul>
-          {% for key, option in question.Alternativas.items %} 
-          <input type="button">{{ key }}: {{ option }} </input>
-          <br>
-          {% endfor %}
-        </ul>
-      {% endfor %}
+  <div class="h-screen flex flex-col justify-between text-white">
+    <div class="p-4">
+      <h1 class="text-2xl font-bold mb-4">Perguntas do Jogo</h1>
+      <form method="post" action="{% url 'game'%}">
+        {% csrf_token %} {# Adicione o token CSRF se necessário #}
+        {% for question in questions %}
+          <p class="text-xl mb-2">{{ question.Pergunta }}</p>
+          <ul>
+            {% for key, option in question.Alternativas.items %}
+              <li>
+                <label class="inline-flex items-center">
+                  <input type="radio" name="resposta" value="{{ key }}" class="form-radio text-indigo-600">
+                  <span class="ml-2">{{ key }}: {{ option }}</span>
+                </label>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+        <div class="mt-4">
+          <input type="submit" value="Enviar Respostas" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+        </div>
+      </form>
     </div>
   </div>
 {% endblock %}
