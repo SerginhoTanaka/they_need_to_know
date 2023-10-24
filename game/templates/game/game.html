@@ -6,9 +6,10 @@
     <div class="p-4">
       <h1 class="text-2xl font-bold mb-4">Perguntas do Jogo</h1>
       <form method="POST" action="{% url 'game' user.id %}">
-        {% csrf_token %} {# Adicione o token CSRF se necessário #}
+        {% csrf_token %} 
         {% for question in questions %}
           <p class="text-xl mb-2">{{ question.Pergunta }}</p>
+          <p class="text-xl mb-2">Resposta correta: {{ correct_answers.forloop.counter }}</p>
           <ul>
             {% for key, option in question.Alternativas.items %}
               <li>

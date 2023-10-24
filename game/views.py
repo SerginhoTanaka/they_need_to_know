@@ -8,8 +8,7 @@ def play(request):
     return render(request, 'game/play.html')
 
 def game(request,user_id):
-    url_qa = '../../template/static/QA.json'  # Corrigi o caminho para o JSON
-
+    url_qa = static('../../template/static/QA.json' ) 
     with open(url_qa, 'r') as qa:
         data = json.load(qa)
 
@@ -17,7 +16,8 @@ def game(request,user_id):
     random.shuffle(qa_keys)
     questions = [data[key] for key in qa_keys[:7]]  
     correct_answers = [question['Resposta'] for question in questions]
-    explanations = [question['Explicação'] for question in questions]
+    # print(correct_answers)
+    # explanations = [question['Explicação'] for question in questions]
     questions_data = [{'Pergunta': question['Pergunta'], 'Alternativas': question['Alternativas']} for question in questions]
 
     if request.method == 'POST':
@@ -25,16 +25,19 @@ def game(request,user_id):
 
         for i, answer in enumerate(answers):
             if answer == correct_answers[i]:
-                explanation = explanations[i]
-                score = Score.objects.get(pk=user_id)
+                # explanation = explanations[i]
+                user = get_object_or_404(User, pk=user_id)
+                score = Score.objects.get(user=user)
                 score.score += 10
                 streak += 1  
                 if streak == 3:
                     score.score += 30
                 score.save()
-                return render(request, 'game/game.html', {'questions': questions_data, 'correct_answers': correct_answers, 'explanation': explanation})
+                return render(request, 'game/game.html', {'questions': questions_data, 'correct_answers': correct_answers })
             else:
                 streak = 0
+            
+    return render(request, 'game/game.html', {'questions': questions_data})
 def user(request):
 
     return render(request, 'game/user.html')
