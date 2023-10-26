@@ -6,18 +6,21 @@ from django.contrib import auth
 # Create your views here.
 
 def login(request):
-    if request.method == 'POST':
+    print("login")
+    if request.method == 'GET':
         return render(request, 'login/index.html')
     
     email = request.POST.get('email')
     password = request.POST.get('password')
-
-    user = auth.authenticate(request, username=email, password=password)
-    if not user:
+    print(email,password)
+    user = auth.authenticate(username=email, password=password)
+    print(user)
+    if user is None:
+        print("erro")
         return render(request, 'login/index.html', {'error': 'Invalid email or password'})
-    else:
-        auth.login(request, user)
-        return render(request, 'game/play.html')
+    
+    auth.login(request, user)
+    return redirect('play')
     
     
 def signup(request):
