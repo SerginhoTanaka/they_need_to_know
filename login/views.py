@@ -6,17 +6,14 @@ from django.contrib import auth
 # Create your views here.
 
 def login(request):
-    print("login")
     if request.method == 'GET':
         return render(request, 'login/index.html')
     
-    email = request.POST.get('email')
+    username = request.POST.get('user')
     password = request.POST.get('password')
-    print(email,password)
-    user = auth.authenticate(username=email, password=password)
-    print(user)
+
+    user = auth.authenticate(username=username ,password=password)
     if user is None:
-        print("erro")
         return render(request, 'login/index.html', {'error': 'Invalid email or password'})
     
     auth.login(request, user)
@@ -25,7 +22,8 @@ def login(request):
     
 def signup(request):
     if request.method == 'POST':
-        username = request.POST.get('name')
+        name = request.POST.get('name')
+        username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
         password2 = request.POST.get('password_confirmation')
@@ -50,7 +48,7 @@ def signup(request):
         if User.objects.filter(email=email).exists():
             return render(request, 'login/signup.html', {'error': 'Email already taken'})
 
-        user = User.objects.create_user(username=username, email=email, password=password)
+        user = User.objects.create_user(first_name=name,username=username, email=email, password=password)
         user.save()
 
         return redirect('login')

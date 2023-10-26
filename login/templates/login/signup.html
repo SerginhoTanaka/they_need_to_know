@@ -7,6 +7,11 @@
         <form action="{%url 'signup'%}" method="POST">
             {% csrf_token %}
             <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-600">user</label>
+                <input type="text" id="username" name="username" class="w-full p-2 border rounded-md" placeholder="Seu nome" required>
+            </div>
+            {% csrf_token %}
+            <div class="mb-4">
                 <label for="name" class="block text-sm font-medium text-gray-600">Nome</label>
                 <input type="text" id="name" name="name" class="w-full p-2 border rounded-md" placeholder="Seu nome" required>
             </div>
