@@ -50,8 +50,9 @@ def user(request):
 
 
 def edit(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
+    
     print(user_id, "id")
+    user = get_object_or_404(User, pk=user_id)
     if request.method == 'POST':
         form = FormUser(request.POST or None, instance=user)
         if form.is_valid():

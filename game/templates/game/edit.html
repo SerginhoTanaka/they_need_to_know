@@ -2,13 +2,13 @@
 {% load static %}
 {% block content %}
 {% include 'game/partial_game/_navgame.html'%}
-<div class="flex justify-center items-center h-screen">
+<div class="flex justify-center items-center h-screen text-white">
         {{ form.as_p }}
     <form action="" method="POST">
         {% csrf_token %}
         <input type="submit" value="Submit">
     </form>
-    <a href="{% url 'user' user.id %}"></a>
-</div>
+    <a href="{% url 'edit' user.id %}"></a>
+</div>  
 
 {% endblock %}
