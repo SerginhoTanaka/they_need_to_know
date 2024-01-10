@@ -28,11 +28,11 @@ def game(request, user_id):
     if request.method == 'POST':
         answers = request.POST.getlist('resposta')
 
+        user = get_object_or_404(User, pk=user_id)
+        score = Score.objects.get(user=user)
         for i, answer in enumerate(answers):
             if answer == correct_answers[i]:
                 # explanation = explanations[i]
-                user = get_object_or_404(User, pk=user_id)
-                score = Score.objects.get(user=user)
                 score.score += 10
                 streak += 1
                 if streak == 3:
